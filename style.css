@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--Off-white);
+}
+
+p {
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+  --Purple--100: hsl(254, 88%, 90%);
+  --Purple--500: hsl(256, 67%, 59%);
+  --Yellow--100: hsl(31, 66%, 93%);
+  --Yellow--500: hsl(39, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+  --Off-white: hsl(0, 0% 96%);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "seven one one four "
+    "seven two three four"
+    "eight two three four"
+    "eight six five five";
+  gap: 24px;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-top: 20px;
+}
+
+.container {
+  padding: 32px;
+  border: none;
+  border-radius: 12px;
+  display: grid;
+  overflow: hidden;
+}
+
+.one {
+  text-align: center;
+  color: var(--White);
+  background-color: var(--Purple--500);
+  gap: 24px;
+  align-content: center;
+  justify-items: center;
+  grid-area: one;
+  /*   padding: 50px 5px; */
+}
+
+.one h1 {
+  font-size: 4.2rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.one img {
+  max-width: 30%;
+}
+
+.one span {
+  color: var(--Yellow--500);
+}
+
+.two {
+  align-items: center;
+  justify-content: center;
+  background-color: var(--White);
+  grid-area: two;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  /*  padding: 10px 30px; */
+}
+
+.two img {
+  max-width: 155%;
+}
+
+.two h2 {
+  text-align: left;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 550;
+}
+
+.three {
+  background-color: var(--Yellow--500);
+  grid-area: three;
+}
+
+.three img {
+  max-width: 105%;
+  margin-bottom: -160px;
+}
+
+.three h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.four {
+  background-color: var(--Purple--100);
+  gap: 20px;
+  grid-area: four;
+  align-content: center;
+}
+
+.four h2 {
+  /*   text-align: center; */
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 550;
+}
+
+.four img {
+  max-width: 180%;
+}
+
+.four p {
+  text-align: left;
+  margin-top: 10px;
+  line-height: 1.1;
+}
+
+.five {
+  background-color: var(--Purple--500);
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  grid-area: five;
+  grid-template-columns: 1fr 1fr;
+}
+
+.five img {
+  max-width: 90%;
+}
+
+.five h2 {
+  font-size: 2.4rem;
+  color: var(--White);
+  /*  text-align: center; */
+  line-height: 1;
+  font-weight: 550;
+}
+
+.six {
+  background-color: var(--Off-white);
+  gap: 10px;
+  grid-area: six;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.six span {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.six h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.six img {
+  max-width: 80%;
+}
+
+.seven {
+  background-color: var(--Yellow--100);
+  align-content: center;
+  justify-items: center;
+  gap: 20px;
+  grid-area: seven;
+  /*   padding: 25px; */
+}
+
+.seven span {
+  color: var(--Purple--500);
+  font-style: italic;
+}
+
+.seven h2 {
+  line-height: 1;
+  font-size: 2.2rem;
+  font-weight: 550;
+}
+
+.seven img {
+  max-width: 90%;
+}
+
+.eight {
+  background-color: var(--Yellow--500);
+  gap: 40px;
+  grid-area: eight;
+  /*   padding: 25px; */
+}
+
+.eight h2 {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 550;
+}
+
+.eight img {
+  max-width: 105%;
+  margin-top: 10px;
+  margin-inline: auto;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--Black);
+}
+
+@media screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+       "one one"
+      "two three"
+      "four four"
+      "five five"
+      "six seven"
+      "eight eight";
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six"
+      "seven"
+      "eight";
+  }
+
+  .one h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .one {
+    gap: 10px;
+    padding: 30px 10px;
+  }
+
+  .one img {
+    max-width: 50%;
+  }
+
+  .two h2 {
+    font-size: 1.6rem;
+    margin-top: 10px;
+  }
+
+  .two img {
+    max-width: 100%;
+  }
+
+  .three h2 {
+    font-size: 2rem;
+  }
+
+  .three {
+    gap: 20px;
+  }
+
+  .three img {
+    max-width: 80%;
+    margin-bottom: -55px;
+  }
+
+  .four h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .four {
+    align-content: center;
+    justify-items: center;
+  }
+
+  .four img {
+    max-width: 100%;
+  }
+
+  .four p {
+    text-align: center;
+  }
+
+  .five {
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-items: center;
+    gap: 20px;
+  }
+
+  .five img {
+    max-width: 70%;
+  }
+
+  .five h2 {
+    text-align: center;
+    font-size: 2.3rem;
+  }
+
+  .six span {
+    font-size: 2.7rem;
+  }
+
+  .six img {
+    max-width: 60%;
+  }
+
+  .seven h2 {
+    font-size: 2rem;
+  }
+
+  .seven img {
+    max-width: 70%;
+  }
+
+  .seven {
+    align-content: center;
+    justify-items: start;
+  }
+
+  
+
+  .eight img{
+    max-width: 80%;
+     margin-inline: 0;
+  }
+
+  .eight h2{
+    font-size: 2rem;
+  }
+}
